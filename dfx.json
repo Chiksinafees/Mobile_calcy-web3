@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "calcy_backend": {
+      "main": "src/calcy_backend/main.mo",
+      "type": "motoko"
+    },
+    "calcy_frontend": {
+      "dependencies": [
+        "calcy_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/calcy_frontend/src/index.html"
+      },
+      "source": [
+        "src/calcy_frontend/assets",
+        "dist/calcy_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
